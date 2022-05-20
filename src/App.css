@@ -1,38 +1,83 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  background-color: #003049;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+.App-header {
+  padding-top: 24px;
+  float: left;
+  padding-left: 24px;
+}
+
+.App-section {
+  align-self: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/* URL editor */
+.editor-container {
+  max-width: calc(100vw - 20%);
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.input-box {
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 20px;
+  flex-grow: 3;
+  color: #353535;
+}
+.input-box:focus {
+  outline: none;
+  box-shadow: none;
+  outline-offset: 0;
+}
+
+.input-button {
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 20px;
+  flex-grow: 1;
+  background-color: #d62828;
+  border: 2px #d62828 solid;
+  color: #fcbf49;
+  cursor: pointer;
+}
+
+.input-button:hover {
+  background-color: #fcbf49;
+  border: 2px #fcbf49 solid;
+  color: #d62828;
+}
+
+/* URL Result */
+.result-container {
+  min-height: 40px;
+  border: 1px #fcbf49 solid;
+  margin-top: 16px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+}
+
+.result-url {
   color: white;
+  flex-grow: 10;
+  padding-left: 10px;
+  cursor: text;
 }
 
-.App-link {
-  color: #61dafb;
+.copy-button {
+  padding-right: 10px;
+  cursor: pointer;
+  color: #fcbf49;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.copy-button:hover {
+  color: #d62828;
 }

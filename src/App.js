@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./assets/logo.png";
+import "./App.css";
+import UrlEditor from "./components/UrlEditor";
+import UrlResult from "./components/UrlResult";
+import React,{useState} from "react";
 
 function App() {
+
+  const [shortenUrl, setShortenUrl] = useState("")
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <img src={logo} />
       </header>
+      <section className="App-section">
+        <UrlEditor setShortUrl={setShortenUrl}/>
+        <UrlResult url={shortenUrl}/>
+      </section>
     </div>
   );
 }
