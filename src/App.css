@@ -36,7 +36,6 @@
   outline-offset: 0;
 }
 
-
 .input-button {
   display: inline-block;
   padding: 10px 15px;
@@ -62,6 +61,7 @@
   margin-left: auto;
   margin-right: auto;
   align-items: center;
+  justify-content: space-between;
 }
 
 .result-url {
@@ -80,11 +80,18 @@
   color: #d62828;
 }
 
-
-
 /* Adding responsivenewss */
 @media (max-width: 400px) {
   .input-box {
     max-width: 150px;
+  }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  .input-box {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 20px;
+    color: #fff;
   }
 }
