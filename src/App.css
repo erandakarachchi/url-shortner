@@ -19,7 +19,6 @@
 
 /* URL editor */
 .editor-container {
-  max-width: calc(100vw - 20%);
   display: flex;
   align-items: center;
 }
@@ -28,20 +27,20 @@
   display: inline-block;
   padding: 10px 15px;
   font-size: 20px;
-  flex-grow: 3;
   color: #353535;
 }
+
 .input-box:focus {
   outline: none;
   box-shadow: none;
   outline-offset: 0;
 }
 
+
 .input-button {
   display: inline-block;
   padding: 10px 15px;
   font-size: 20px;
-  flex-grow: 1;
   background-color: #d62828;
   border: 2px #d62828 solid;
   color: #fcbf49;
@@ -67,7 +66,6 @@
 
 .result-url {
   color: white;
-  flex-grow: 10;
   padding-left: 10px;
   cursor: text;
 }
@@ -80,4 +78,13 @@
 
 .copy-button:hover {
   color: #d62828;
+}
+
+
+
+/* Adding responsivenewss */
+@media (max-width: 400px) {
+  .input-box {
+    max-width: 150px;
+  }
 }
